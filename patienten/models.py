@@ -13,6 +13,9 @@ class Patient(models.Model):
     medikamente = models.TextField(max_length=500)
     arzt = models.ForeignKey('Arzt', related_name='patient_arzt', on_delete=models.CASCADE, null=True, blank=True)
 
+    def __str__(self):
+        return self.patient
+
 
 
 class Arzt(models.Model):
@@ -20,6 +23,9 @@ class Arzt(models.Model):
     email = models.CharField(max_length=50)
     web_seite = models.CharField(max_length=50)
     tel = models.FloatField()
+
+    def __str__(self):
+        return self.name
 
 
     
