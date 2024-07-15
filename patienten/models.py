@@ -19,7 +19,6 @@ class Arzt(models.Model):
     name = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
     web_seite = models.CharField(max_length=50)
-    medikamente = models.TextField(max_length=500)
     tel = models.FloatField()
 
 
